@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DanhSachHoaDon xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:noNamespaceSchemaLocation="HoaDon.xsd">
+
+  <!-- Hóa đơn 1 -->
+  <HoaDon>
+    <SoHoaDon>HD001</SoHoaDon>
+    <Ngay>2026-04-02</Ngay>
+    <KhachHang MaKH="KH01">
+      <TenKhachHang>Nguyen Van A</TenKhachHang>
+      <DiaChi>123 Le Loi, Hanoi</DiaChi>
+      <SoDienThoai>0987654321</SoDienThoai>
+      <Email>nguyenvana@gmail.com</Email>
+      <Email>nguyenvana@yahoo.com</Email>
+    </KhachHang>
+    <DanhSachMatHang>
+      <MatHang>
+        <MaHang>HH01</MaHang>
+        <TenHang>Banh Mi</TenHang>
+        <SoLuong>5</SoLuong>
+        <DonGia>15000</DonGia>
+      </MatHang>
+      <MatHang>
+        <MaHang>HH02</MaHang>
+        <TenHang>Nuoc Ngot</TenHang>
+        <SoLuong>3</SoLuong>
+        <DonGia>10000</DonGia>
+      </MatHang>
+    </DanhSachMatHang>
+  </HoaDon>
+
+  <!-- Hóa đơn 2 -->
+  <HoaDon>
+    <SoHoaDon>HD002</SoHoaDon>
+    <Ngay>2026-04-02</Ngay>
+    <KhachHang MaKH="KH02">
+      <TenKhachHang>Tran Thi B</TenKhachHang>
+      <SoDienThoai>0912345678</SoDienThoai>
+      <Email>tranthib@gmail.com</Email>
+    </KhachHang>
+    <DanhSachMatHang>
+      <MatHang>
+        <MaHang>HH03</MaHang>
+        <TenHang>Banh Ngot</TenHang>
+        <SoLuong>2</SoLuong>
+        <DonGia>20000</DonGia>
+      </MatHang>
+      <MatHang>
+        <MaHang>HH04</MaHang>
+        <TenHang>Cafe</TenHang>
+        <SoLuong>1</SoLuong>
+        <DonGia>25000</DonGia>
+      </MatHang>
+    </DanhSachMatHang>
+  </HoaDon>
+
+</DanhSachHoaDon>

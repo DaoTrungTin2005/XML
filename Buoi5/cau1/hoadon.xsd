@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Kiểu cho mã khách hàng: 2 chữ cái + 2 số -->
+  <xs:simpleType name="MaKhachHangType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Za-z]{2}\d{2}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Kiểu cho mã hàng: 2 chữ cái + 2 số -->
+  <xs:simpleType name="MaHangType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Za-z]{2}\d{2}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Kiểu cho số điện thoại: 10 chữ số -->
+  <xs:simpleType name="SoDienThoaiType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{10}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Kiểu cho email, đơn giản ###@###.### -->
+  <xs:simpleType name="EmailType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value=".+@.+\..+"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Kiểu cho số lượng: số nguyên -->
+  <xs:simpleType name="SoLuongType">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Kiểu cho đơn giá: số thực dương -->
+  <xs:simpleType name="DonGiaType">
+    <xs:restriction base="xs:decimal">
+      <xs:minInclusive value="0"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Kiểu cho mặt hàng -->
+  <xs:complexType name="MatHangType">
+    <xs:sequence>
+      <xs:element name="MaHang" type="MaHangType"/>
+      <xs:element name="TenHang" type="xs:string"/>
+      <xs:element name="SoLuong" type="SoLuongType"/>
+      <xs:element name="DonGia" type="DonGiaType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Kiểu cho khách hàng -->
+  <xs:complexType name="KhachHangType">
+    <xs:sequence>
+      <xs:element name="TenKhachHang" type="xs:string"/>
+      <xs:element name="DiaChi" type="xs:string" minOccurs="0"/> <!-- Địa chỉ tùy chonj-->
+      <xs:element name="SoDienThoai" type="SoDienThoaiType"/>
+      <xs:element name="Email" type="EmailType" maxOccurs="2"/>
+    </xs:sequence>
+    <xs:attribute name="MaKH" type="MaKhachHangType" use="required"/>
+  </xs:complexType>
+
+  <!-- Kiểu cho hóa đơn -->
+  <xs:complexType name="HoaDonType">
+    <xs:sequence>
+      <xs:element name="SoHoaDon" type="xs:string"/>
+      <xs:element name="Ngay" type="xs:date"/>
+      <xs:element name="KhachHang" type="KhachHangType"/>
+      <xs:element name="DanhSachMatHang" type="DanhSachMatHangType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Kiểu cho danh sách mặt hàng -->
+  <xs:complexType name="DanhSachMatHangType">
+    <xs:sequence>
+      <xs:element name="MatHang" type="MatHangType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <!-- Root element -->
+  <xs:element name="DanhSachHoaDon">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="HoaDon" type="HoaDonType" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
