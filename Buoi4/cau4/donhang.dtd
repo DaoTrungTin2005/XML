@@ -1,0 +1,16 @@
+<!ELEMENT DanhSachDonHang (DonHang+)>
+
+<!ELEMENT DonHang (NgayDatHang, KhachHang, DanhSachSanPham)>
+<!ATTLIST DonHang MaDonHang CDATA #REQUIRED>
+
+<!ELEMENT NgayDatHang (#PCDATA)>
+
+<!ELEMENT KhachHang (HoTen, DiaChi)>
+<!ELEMENT HoTen (#PCDATA)>
+<!ELEMENT DiaChi (#PCDATA)>
+
+<!ELEMENT DanhSachSanPham (SanPham+)>
+<!ELEMENT SanPham (TenSanPham, SoLuong, GiaTien)>
+<!ELEMENT TenSanPham (#PCDATA)>
+<!ELEMENT SoLuong (#PCDATA)>
+<!ELEMENT GiaTien (#PCDATA)>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DanhSachDonHang xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:noNamespaceSchemaLocation="donhang.xsd">
+
+  <DonHang MaDonHang="DH0001">
+    <NgayDatHang>2026-04-02</NgayDatHang>
+    <KhachHang>
+      <HoTen>Nguyễn Văn A</HoTen>
+      <DiaChi>123 Đường Lê Lợi, Hà Nội</DiaChi>
+    </KhachHang>
+    <DanhSachSanPham>
+      <SanPham>
+        <TenSanPham>Laptop Dell</TenSanPham>
+        <SoLuong>2</SoLuong>
+        <GiaTien>15000000</GiaTien>
+      </SanPham>
+      <SanPham>
+        <TenSanPham>Chuột Logitech</TenSanPham>
+        <SoLuong>10</SoLuong>
+        <GiaTien>500000</GiaTien>
+      </SanPham>
+    </DanhSachSanPham>
+  </DonHang>
+
+  <DonHang MaDonHang="DH0002">
+    <NgayDatHang>2026-04-03</NgayDatHang>
+    <KhachHang>
+      <HoTen>Trần Thị B</HoTen>
+      <DiaChi>456 Đường Trần Phú, TP HCM</DiaChi>
+    </KhachHang>
+    <DanhSachSanPham>
+      <SanPham>
+        <TenSanPham>Điện thoại Samsung</TenSanPham>
+        <SoLuong>1</SoLuong>
+        <GiaTien>12000000</GiaTien>
+      </SanPham>
+      <SanPham>
+        <TenSanPham>Sạc dự phòng</TenSanPham>
+        <SoLuong>3</SoLuong>
+        <GiaTien>300000</GiaTien>
+      </SanPham>
+    </DanhSachSanPham>
+  </DonHang>
+
+</DanhSachDonHang>

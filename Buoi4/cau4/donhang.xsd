@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Root element -->
+  <xs:element name="DanhSachDonHang">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="DonHang" type="DonHangType" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:complexType name="DonHangType">
+      <xs:sequence>
+        <xs:element name="NgayDatHang" type="xs:date"></xs:element>
+        <xs:element name="KhachHang" type="KhachHangType"></xs:element>
+        <xs:element name="DanhSachSanPham" type="DanhSachSanPhamType"></xs:element>
+      </xs:sequence>
+      <xs:attribute name="MaDonHang" type="MaDonHangType" use="required"/>
+  </xs:complexType>
+
+    <!-- Kiểu cho khách hàng -->
+  <xs:complexType name="KhachHangType">
+    <xs:sequence>
+      <xs:element name="HoTen" type="xs:string"/>
+      <xs:element name="DiaChi" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+
+    <!-- Kiểu cho danh sách sản phẩm -->
+  <xs:complexType name="DanhSachSanPhamType">
+    <xs:sequence>
+      <xs:element name="SanPham" type="SanPhamType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+    <!-- Kiểu cho sản phẩm -->
+  <xs:complexType name="SanPhamType">
+    <xs:sequence>
+      <xs:element name="TenSanPham" type="xs:string"/>
+      <xs:element name="SoLuong" type="SoLuongType"/>
+      <xs:element name="GiaTien" type="xs:decimal"/>
+    </xs:sequence>
+  </xs:complexType>
+
+    <!-- Kiểu cho số lượng: ≥ 1 -->
+  <xs:simpleType name="SoLuongType">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+     <!-- Kiểu cho mã đơn hàng 6 ký tự -->
+  <xs:simpleType name="MaDonHangType">
+    <xs:restriction base="xs:string">
+      <xs:length value="6"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
