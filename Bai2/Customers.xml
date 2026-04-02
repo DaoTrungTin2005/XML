@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Database SYSTEM "Customers.dtd">
+
+<Database>
+    <Customers>
+        <Customer id_customer="c1">
+            <fullname>Ben Richardson</fullname>
+            <address>Park Drive 2</address>
+        </Customer>
+
+        <Customer id_customer="c2">
+            <fullname>Marc Wretcher</fullname>
+            <address>Mill Drive 75</address>
+        </Customer>
+
+        <Customer id_customer="c3">
+            <fullname>Angel Steady</fullname>
+            <address>Lake Sight 15</address>
+        </Customer>
+    </Customers>
+
+    <Accounts>
+        <Account id_account="a1" interest="0.03">
+            <balance>15075</balance>
+            <account_type>savings</account_type>
+        </Account>
+
+                <Account id_account="a2" interest="0.03">
+            <balance>15075</balance>
+            <account_type>savings</account_type>
+        </Account>
+
+        <Account id_account="a3" >
+            <balance>4025</balance>
+            <account_type>checking</account_type>
+        </Account>
+
+        <Account id_account="a4" >
+            <balance>-125</balance>
+            <account_type>checking</account_type>
+        </Account>
+
+        <Account id_account="a5" >
+            <balance>325</balance>
+            <account_type>checking</account_type>
+        </Account>
+    </Accounts>
+
+    <CustomerAccounts>
+        <CustomerAccount fiCustomer="c1" fiAccount="a2"/>
+        <CustomerAccount fiCustomer="c1" fiAccount="a3"/>
+        <CustomerAccount fiCustomer="c2" fiAccount="a4"/>
+        <CustomerAccount fiCustomer="c3" fiAccount="a1"/>
+        <CustomerAccount fiCustomer="c3" fiAccount="a5"/>
+    </CustomerAccounts>
+
+</Database>

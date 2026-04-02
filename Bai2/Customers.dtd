@@ -1,0 +1,28 @@
+<!-- Khai báo cái db-->
+<!ELEMENT Database (Customers, Accounts, CustomerAccounts)>
+
+<!-- Customers-->
+<!ELEMENT Customers (Customer+)>
+<!ELEMENT Customer (fullname, address)>
+<!ATTLIST Customer id_customer ID #REQUIRED>
+
+<!ELEMENT fullname (#PCDATA)>
+<!ELEMENT address (#PCDATA)>
+
+<!-- Accounts-->
+<!ELEMENT Accounts (Account+)>
+<!ELEMENT Account (balance, account_type)>
+<!ATTLIST Account
+    id_account ID #REQUIRED
+    interest CDATA #IMPLIED
+    >
+
+<!ELEMENT balance (#PCDATA)>
+<!ELEMENT account_type (#PCDATA)>
+
+<!-- CustomerAccount (liên kết) -->
+<!ELEMENT CustomerAccounts (CustomerAccount+)>
+<!ELEMENT CustomerAccount EMPTY> <!-- Thẻ không có nd bên trong, chỉ có thuộc tính -->
+<!ATTLIST CustomerAccount
+    fiCustomer IDREF #REQUIRED
+    fiAccount IDREF #REQUIRED>
