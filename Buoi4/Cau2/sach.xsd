@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="DanhSachSach">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Sach" type="SachType" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>  
+    
+    <xs:complexType name="SachType">
+        <xs:sequence>
+            <xs:element name="TieuDe" type= "TieuDeType"></xs:element>
+            <xs:element name="TacGia" type="xs:string"/>
+            <xs:element name="NamXuatBan" type="NamXuatBanType"/>
+        </xs:sequence>
+            <xs:attribute name="ISBN" type="MaSachType" use="required"/>
+    </xs:complexType> 
+
+    <xs:simpleType name="TieuDeType">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="100"/>
+        </xs:restriction>
+    </xs:simpleType>    
+    
+    <xs:simpleType name="NamXuatBanType">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1900"/>
+            <xs:maxInclusive value="2026"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="MaSachType">
+        <xs:restriction base="xs:string">
+            <xs:length value="13"/>
+            <xs:pattern value="\d{13}"/> <!-- Chỉ cho phép 13 chữ số -->
+        </xs:restriction>
+    </xs:simpleType>    
+
+</xs:schema>

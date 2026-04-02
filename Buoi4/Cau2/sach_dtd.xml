@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE DanhSachSach SYSTEM "sach.dtd">
+
+<DanhSachSach>
+    <Sach ISBN="9781234567890">
+        <TieuDe>Lap Trinh Python</TieuDe>
+        <TacGia>Nguyen Van A</TacGia>
+        <NamXuatBan>2020</NamXuatBan>
+    </Sach>
+    <Sach ISBN="9780987654321">
+        <TieuDe>Toan Cao Cap</TieuDe>
+        <TacGia>Tran Thi B</TacGia>
+        <NamXuatBan>2018</NamXuatBan>
+    </Sach>
+</DanhSachSach>

@@ -1,0 +1,7 @@
+<!ELEMENT DanhSachSach (Sach+)>
+<!ELEMENT Sach (TieuDe, TacGia, NamXuatBan)>
+<!ATTLIST Sach ISBN CDATA #REQUIRED> <!-- Nếu để ID ko bắt đầu bằng số dc-->
+
+<!ELEMENT TieuDe (#PCDATA)>
+<!ELEMENT TacGia (#PCDATA)>
+<!ELEMENT NamXuatBan (#PCDATA)>
