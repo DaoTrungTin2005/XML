@@ -1,0 +1,10 @@
+<!ELEMENT DanhSachNhanVien (NhanVien+)>
+
+<!ELEMENT NhanVien (HoTen)>
+<!ATTLIST NhanVien
+    MaNV CDATA #REQUIRED
+    GioiTinh (Nam | Nữ) #REQUIRED
+    PhongBan (IT | HR | Kế_toán | Marketing) #REQUIRED
+>
+
+<!ELEMENT HoTen (#PCDATA)>

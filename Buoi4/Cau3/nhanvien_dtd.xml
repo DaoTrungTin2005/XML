@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE DanhSachNhanVien SYSTEM "nhanvien.dtd">
+<DanhSachNhanVien>
+
+  <NhanVien MaNV="NV1001" GioiTinh="Nam" PhongBan="IT">
+    <HoTen>Nguyễn Văn A</HoTen>
+  </NhanVien>
+
+  <NhanVien MaNV="NV1002" GioiTinh="Nữ" PhongBan="Kế_toán">
+    <HoTen>Trần Thị B</HoTen>
+  </NhanVien>
+
+</DanhSachNhanVien>

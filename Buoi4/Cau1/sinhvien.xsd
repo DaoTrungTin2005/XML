@@ -14,7 +14,7 @@
         <xs:sequence>
             <xs:element name="HoTen" type= "HoTenType"></xs:element>
             <xs:element name="Tuoi" type="TuoiType"/>
-            <xs:element name="Lop" type="xs:string"/>
+            <xs:element name="Lop" type="xs:string" minOccurs="1"/>
         </xs:sequence>
 
             <xs:attribute name="MaSV" type="MaSVType" use="required"/>

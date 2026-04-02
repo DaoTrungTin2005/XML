@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Root element danh sách nhân viên -->
+  <xs:element name="DanhSachNhanVien">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="NhanVien" type="NhanVienType" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:complexType name="NhanVienType">
+    <xs:sequence>
+      <xs:element name="HoTen" type="xs:string" minOccurs="1"/>
+      <xs:element name="GioiTinh" type="GioiTinhType"/>
+      <xs:element name="PhongBan" type="PhongBanType"/>
+    </xs:sequence>
+    <xs:attribute name="MaNV" type="MaNhanVienType" use="required"/>
+  </xs:complexType>  
+
+  <!-- Kiểu cho phòng ban -->
+  <xs:simpleType name="PhongBanType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="IT"/>
+      <xs:enumeration value="HR"/>
+      <xs:enumeration value="Kế toán"/>
+      <xs:enumeration value="Marketing"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <!-- Kiểu cho giới tính (Nam/Nữ) -->
+  <xs:simpleType name="GioiTinhType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Nam"/>
+      <xs:enumeration value="Nữ"/>
+    </xs:restriction>
+  </xs:simpleType>  
+
+    <!-- Định nghĩa kiểu cho mã nhân viên -->
+  <xs:simpleType name="MaNhanVienType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="NV\d{4}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+</xs:schema>

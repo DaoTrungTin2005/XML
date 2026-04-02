@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DanhSachNhanVien xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:noNamespaceSchemaLocation="nhanvien.xsd">
+
+  <NhanVien MaNV="NV1234">
+    <HoTen>Nguyễn Văn A</HoTen>
+    <GioiTinh>Nam</GioiTinh>
+    <PhongBan>IT</PhongBan>
+  </NhanVien>
+
+  <NhanVien MaNV="NV5678">
+    <HoTen>Trần Thị B</HoTen>
+    <GioiTinh>Nữ</GioiTinh>
+    <PhongBan>Marketing</PhongBan>
+  </NhanVien>
+
+</DanhSachNhanVien>

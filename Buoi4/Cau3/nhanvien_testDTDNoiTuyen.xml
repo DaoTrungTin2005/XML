@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE DanhSachNhanVien [
+    <!ELEMENT DanhSachNhanVien (NhanVien+)>
+
+    <!ELEMENT NhanVien (HoTen)>
+    <!ATTLIST NhanVien
+        MaNV CDATA #REQUIRED
+        GioiTinh (Nam | Nữ) #REQUIRED
+        PhongBan (IT | HR | Kế_toán | Marketing) #REQUIRED
+    >
+
+<!ELEMENT HoTen (#PCDATA)>
+]>
+
+<DanhSachNhanVien>
+
+  <NhanVien MaNV="NV1001" GioiTinh="Nam" PhongBan="IT">
+    <HoTen>Nguyễn Văn A</HoTen>
+  </NhanVien>
+
+  <NhanVien MaNV="NV1002" GioiTinh="Nữ" PhongBan="Kế_toán">
+    <HoTen>Trần Thị B</HoTen>
+  </NhanVien>
+
+</DanhSachNhanVien>

@@ -11,8 +11,8 @@
     
     <xs:complexType name="SachType">
         <xs:sequence>
-            <xs:element name="TieuDe" type= "TieuDeType"></xs:element>
-            <xs:element name="TacGia" type="xs:string"/>
+            <xs:element name="TieuDe" type= "TieuDeType" minOccurs="1"></xs:element>
+            <xs:element name="TacGia" type="xs:string" minOccurs="1"/>
             <xs:element name="NamXuatBan" type="NamXuatBanType"/>
         </xs:sequence>
             <xs:attribute name="ISBN" type="MaSachType" use="required"/>
