@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<InvoiceSystem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:noNamespaceSchemaLocation="invoice.xsd">
+
+  <Customers>
+    <Customer>
+      <CustomerID>C01</CustomerID>
+      <Name>Nguyen Van A</Name>
+      <Phone>0123456789</Phone>
+    </Customer>
+    <Customer>
+      <CustomerID>C02</CustomerID>
+      <Name>Tran Thi B</Name>
+      <Phone>0987654321</Phone>
+    </Customer>
+  </Customers>
+
+  <Products>
+    <Product>
+      <ProductID>P01</ProductID>
+      <Name>Laptop</Name>
+      <Price>1500</Price>
+      <Stock>10</Stock>
+    </Product>
+    <Product>
+      <ProductID>P02</ProductID>
+      <Name>Mouse</Name>
+      <Price>20</Price>
+      <Stock>50</Stock>
+    </Product>
+  </Products>
+
+  <Invoices>
+    <Invoice>
+      <InvoiceID>I01</InvoiceID>
+      <CustomerID>C01</CustomerID>
+      <Date>2024-05-01</Date>
+      <TotalAmount>1520</TotalAmount>
+    </Invoice>
+    <Invoice>
+      <InvoiceID>I02</InvoiceID>
+      <CustomerID>C02</CustomerID>
+      <Date>2024-05-02</Date>
+      <TotalAmount>40</TotalAmount>
+    </Invoice>
+  </Invoices>
+
+  <InvoiceDetails>
+    <InvoiceDetail>
+      <InvoiceDetailID>D01</InvoiceDetailID>
+      <InvoiceID>I01</InvoiceID>
+      <ProductID>P01</ProductID>
+      <Quantity>1</Quantity>
+      <UnitPrice>1500</UnitPrice>
+    </InvoiceDetail>
+
+    <InvoiceDetail>
+      <InvoiceDetailID>D02</InvoiceDetailID>
+      <InvoiceID>I01</InvoiceID>
+      <ProductID>P02</ProductID>
+      <Quantity>1</Quantity>
+      <UnitPrice>20</UnitPrice>
+    </InvoiceDetail>
+
+    <InvoiceDetail>
+      <InvoiceDetailID>D03</InvoiceDetailID>
+      <InvoiceID>I02</InvoiceID>
+      <ProductID>P02</ProductID>
+      <Quantity>2</Quantity>
+      <UnitPrice>20</UnitPrice>
+    </InvoiceDetail>
+  </InvoiceDetails>
+
+</InvoiceSystem>

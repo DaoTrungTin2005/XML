@@ -1,0 +1,42 @@
+
+<!ELEMENT InvoiceSystem (Customers, Products, Invoices, InvoiceDetails)>
+
+<!-- Customers -->
+<!ELEMENT Customers (Customer+)>
+<!ELEMENT Customer (Name, Phone)>
+<!ATTLIST Customer CustomerID ID #REQUIRED>
+
+<!ELEMENT Name (#PCDATA)>
+<!ELEMENT Phone (#PCDATA)>
+
+<!-- Products -->
+<!ELEMENT Products (Product+)>
+<!ELEMENT Product (Name, Price, Stock)>
+<!ATTLIST Product ProductID ID #REQUIRED>
+
+<!ELEMENT Price (#PCDATA)>
+<!ELEMENT Stock (#PCDATA)>
+
+<!-- Invoices -->
+<!ELEMENT Invoices (Invoice+)>
+<!ELEMENT Invoice (Date, TotalAmount)>
+<!ATTLIST Invoice
+    InvoiceID ID #REQUIRED
+    CustomerID IDREF #REQUIRED
+    >
+
+<!ELEMENT Date (#PCDATA)>
+<!ELEMENT TotalAmount (#PCDATA)>
+
+
+<!-- InvoiceDetails -->
+<!ELEMENT InvoiceDetails (InvoiceDetail+)>
+<!ELEMENT InvoiceDetail (Quantity, UnitPrice)>
+<!ATTLIST InvoiceDetail
+    DetailID ID #REQUIRED
+    InvoiceID IDREF #REQUIRED
+    ProductID IDREF #REQUIRED
+    >
+
+<!ELEMENT Quantity (#PCDATA)>
+<!ELEMENT UnitPrice (#PCDATA)>

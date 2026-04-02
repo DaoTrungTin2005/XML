@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE InvoiceSystem SYSTEM "Invoice.dtd">
+
+<InvoiceSystem>
+    <Customers>
+        <Customer CustomerID="C001">
+            <Name>Nguyen Van A</Name>
+            <Phone>0123456789</Phone>
+        </Customer>
+        <Customer CustomerID="C002">
+            <Name>Tran Thi B</Name>
+            <Phone>0987654321</Phone>
+        </Customer>
+    </Customers>
+
+    <Products>
+        <Product ProductID="P001">
+            <Name>iPhone 14</Name>
+            <Price>2500</Price>
+            <Stock>50</Stock>
+        </Product>
+        <Product ProductID="P002">
+            <Name>Samsung Galaxy S23</Name>
+            <Price>2000</Price>
+            <Stock>30</Stock>
+        </Product>
+    </Products>
+
+    <Invoices>
+        <Invoice InvoiceID="I001" CustomerID="C001">
+            <Date>2026-04-02</Date>
+            <TotalAmount>5000</TotalAmount>
+        </Invoice>
+        <Invoice InvoiceID="I002" CustomerID="C002">
+            <Date>2026-04-02</Date>
+            <TotalAmount>2000</TotalAmount>
+        </Invoice>
+    </Invoices>
+
+    <InvoiceDetails>
+        <InvoiceDetail DetailID="D001" InvoiceID="I001" ProductID="P001">
+            <Quantity>2</Quantity>
+            <UnitPrice>2500</UnitPrice>
+        </InvoiceDetail>
+        <InvoiceDetail DetailID="D002" InvoiceID="I002" ProductID="P002">
+            <Quantity>1</Quantity>
+            <UnitPrice>2000</UnitPrice>
+        </InvoiceDetail>
+    </InvoiceDetails>
+</InvoiceSystem>

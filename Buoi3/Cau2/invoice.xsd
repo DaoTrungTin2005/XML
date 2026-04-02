@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<!-- Root -->
+ <xs:element name="InvoiceSystem">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="Customers" type="CustomersType"></xs:element>
+            <xs:element name="Products" type="ProductsType"></xs:element>
+            <xs:element name="Invoices" type="InvoicesType"></xs:element>
+            <xs:element name="InvoiceDetails" type="InvoiceDetailsType"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Key -->
+     <xs:key name= "CustomerKey">
+        <xs:selector xpath="Customers/Customer"></xs:selector>
+        <xs:field xpath="CustomerID"></xs:field>
+     </xs:key>
+
+     <xs:key name= "ProductKey">
+        <xs:selector xpath="Products/Product"></xs:selector>
+        <xs:field xpath="ProductID"></xs:field>
+     </xs:key>
+
+     <xs:key name = "InvoiceKey">
+        <xs:selector xpath="Invoices/Invoice"></xs:selector>
+        <xs:field xpath="InvoiceID"></xs:field>
+     </xs:key>
+
+     <xs:key name = "InvoiceDetailKey">
+            <xs:selector xpath="InvoiceDetails/InvoiceDetail"></xs:selector>
+            <xs:field xpath="InvoiceDetailID"></xs:field>
+     </xs:key>
+
+     <!-- Khóa ngoai-->
+      <!-- Khóa ngoại Invoice.CustomerID tham chiếu Customer.CustomerID -->
+      <xs:keyref name= "InvoiceCustomerRef" refer= "CustomerKey">
+        <xs:selector xpath="Invoices/Invoice"></xs:selector>
+        <xs:field xpath="CustomerID"></xs:field>
+      </xs:keyref>
+
+         <!-- Khóa ngoại InvoiceDetail.InvoiceID tham chiếu Invoice.InvoiceID -->
+    <xs:keyref name= "InvoiceDetailInvoiceRef" refer= "InvoiceKey">
+      <xs:selector xpath="InvoiceDetails/InvoiceDetail"></xs:selector>
+      <xs:field xpath="InvoiceID"></xs:field>
+    </xs:keyref>
+
+    <!-- Khóa ngoại InvoiceDetail.ProductID tham chiếu Product.ProductID -->
+    <xs:keyref name= "InvoiceDetailProductRef" refer= "ProductKey">
+      <xs:selector xpath="InvoiceDetails/InvoiceDetail"></xs:selector>
+      <xs:field xpath="ProductID"></xs:field>
+    </xs:keyref>
+
+</xs:element>
+
+    <!-- Customers -->
+    <xs:complexType name= "CustomersType">
+        <xs:sequence>
+            <xs:element name="Customer" type="CustomerType" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name= "CustomerType">
+        <xs:sequence>
+            <xs:element name ="CustomerID" type="xs:string"></xs:element>
+            <xs:element name="Name" type="NameType"></xs:element>
+            <xs:element name="Phone" type="PhoneType"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="NameType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="3"></xs:minLength>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="PhoneType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{10,11}"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    <!-- Products -->
+    <xs:complexType name= "ProductsType">
+        <xs:sequence>
+            <xs:element name="Product" type="ProductType" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name= "ProductType">
+        <xs:sequence>
+            <xs:element name ="ProductID" type="xs:string"></xs:element>
+            <xs:element name="Name" type="NameType"></xs:element>
+            <xs:element name="Price" type="PositiveDecimal"></xs:element>
+            <xs:element name="Stock" type="xs:positiveInteger"></xs:element>
+        </xs:sequence>   
+    </xs:complexType>
+
+    <!-- Invoices -->
+    <xs:complexType name= "InvoicesType">
+        <xs:sequence>
+            <xs:element name="Invoice" type="InvoiceType" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="InvoiceType">
+        <xs:sequence>
+            <xs:element name="InvoiceID" type="xs:string"/>
+            <xs:element name="CustomerID" type="xs:string"/>
+            <xs:element name="Date" type="xs:date"/>
+            <xs:element name="TotalAmount" type="PositiveDecimal"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Invoice Details-->
+    <xs:complexType name="InvoiceDetailsType">
+        <xs:sequence>
+            <xs:element name="InvoiceDetail" type="InvoiceDetailType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>    
+
+    <xs:complexType name="InvoiceDetailType">
+        <xs:sequence>
+            <xs:element name="InvoiceDetailID" type="xs:string"/>
+            <xs:element name="InvoiceID" type="xs:string"/>
+            <xs:element name="ProductID" type="xs:string"/>
+            <xs:element name="Quantity" type="xs:positiveInteger"/>
+            <xs:element name="UnitPrice" type="PositiveDecimal"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <!-- HELPER-->
+    <xs:simpleType name="PositiveDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:minExclusive value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+ </xs:schema>
