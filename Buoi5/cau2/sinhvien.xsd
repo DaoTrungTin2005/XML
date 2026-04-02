@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="DanhSachSinhVien">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="SinhVien" type="SinhVienType" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+    <!-- Kiểu sinh viên -->
+  <xs:complexType name="SinhVienType">
+    <xs:sequence>
+      <xs:element name="HoTen" type="xs:string"/>
+      <xs:element name="Lop" type="LopType"/>
+      <xs:element name="DanhSachMon" type="DanhSachMonType"/>
+    </xs:sequence>
+    <xs:attribute name="MaSV" type="MaSVType" use="required"/>
+  </xs:complexType>
+
+
+  <!-- Lớp: chỉ nhận các giá trị cho trước -->
+  <xs:simpleType name="LopType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="TBK50DH"/>
+      <xs:enumeration value="TBK50CD"/>
+      <xs:enumeration value="TBK51DH"/>
+      <xs:enumeration value="TBK51CD"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <!-- Mã sinh viên: 8 chữ số -->
+  <xs:simpleType name="MaSVType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{8}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+
+
+    <!-- Danh sách môn học (1 → 4 môn) -->
+  <xs:complexType name="DanhSachMonType">
+    <xs:sequence>
+      <xs:element name="MonHoc" type="MonHocType" minOccurs="1" maxOccurs="4"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Kiểu môn học -->
+  <xs:complexType name="MonHocType">
+    <xs:sequence>
+      <xs:element name="TenMon" type="xs:string"/>
+      <xs:element name="SoTinChi" type="SoTinChiType"/>
+      <xs:element name="Diem" type="DiemType"/>
+    </xs:sequence>
+    <xs:attribute name="MaMon" type="MaMonType" use="required"></xs:attribute>
+  </xs:complexType>  
+
+  <!-- Mã môn học: 2 chữ + 2 số -->
+  <xs:simpleType name="MaMonType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Za-z]{2}\d{2}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Số tín chỉ: từ 1 đến 5 -->
+  <xs:simpleType name="SoTinChiType">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="1"/>
+      <xs:maxInclusive value="5"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <!-- Điểm: từ 0 đến 10 -->
+  <xs:simpleType name="DiemType">
+    <xs:restriction base="xs:decimal">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="10"/>
+    </xs:restriction>
+  </xs:simpleType>  
+
+
+</xs:schema>

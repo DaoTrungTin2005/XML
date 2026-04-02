@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DanhSachSinhVien xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:noNamespaceSchemaLocation="SinhVien.xsd">
+
+  <!-- Sinh viên 1 -->
+  <SinhVien MaSV="12345678">
+    <HoTen>Nguyen Van A</HoTen>
+    <Lop>TBK50DH</Lop>
+    <DanhSachMon>
+      <MonHoc MaMon="IT01">
+        <TenMon>Lap trinh XML</TenMon>
+        <SoTinChi>3</SoTinChi>
+        <Diem>8.5</Diem>
+      </MonHoc>
+      <MonHoc MaMon="IT02">
+        <TenMon>Co so du lieu</TenMon>
+        <SoTinChi>4</SoTinChi>
+        <Diem>7.0</Diem>
+      </MonHoc>
+    </DanhSachMon>
+  </SinhVien>
+
+  <!-- Sinh viên 2 -->
+  <SinhVien MaSV="87654321">
+    <HoTen>Tran Thi B</HoTen>
+    <Lop>TBK51CD</Lop>
+    <DanhSachMon>
+      <MonHoc MaMon="IT03">
+        <TenMon>Mang may tinh</TenMon>
+        <SoTinChi>3</SoTinChi>
+        <Diem>9.0</Diem>
+      </MonHoc>
+      <MonHoc MaMon="IT04">
+        <TenMon>He dieu hanh</TenMon>
+        <SoTinChi>2</SoTinChi>
+        <Diem>6.5</Diem>
+      </MonHoc>
+    </DanhSachMon>
+  </SinhVien>
+
+</DanhSachSinhVien>
