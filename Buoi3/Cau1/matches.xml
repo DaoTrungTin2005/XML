@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE matches SYSTEM "matches.dtd">
+
+<matches>
+    <match>
+        <score>1-2</score>
+
+        <teams>
+            <home>MC</home>
+            <away>BC</away>
+        </teams>
+
+        <events>
+            <event>
+                <minute>16</minute>
+                <player>Luis Suares</player>
+                <team>BC</team>
+                <type>goal</type>
+                <detail>Penalty</detail>
+            </event>
+
+            <event>
+                <minute>41</minute>
+                <player>Ivan Rakitic</player>
+                <team>BC</team>
+                <type>Red Card</type>
+            </event>
+        </events>
+    </match>
+</matches>

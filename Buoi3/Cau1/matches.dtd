@@ -1,0 +1,18 @@
+<!ELEMENT matches (match+)>
+
+<!ELEMENT match (score, teams, events)>
+
+<!ELEMENT score (#PCDATA)>
+
+<!ELEMENT teams (home, away)>
+<!ELEMENT home (#PCDATA)>
+<!ELEMENT away (#PCDATA)>
+
+<!ELEMENT events (event+)>
+<!ELEMENT event (minute, player, team, type, detail?)>
+
+<!ELEMENT minute (#PCDATA)>
+<!ELEMENT player (#PCDATA)>
+<!ELEMENT team (#PCDATA)>
+<!ELEMENT type (#PCDATA)>
+<!ELEMENT detail (#PCDATA)>
