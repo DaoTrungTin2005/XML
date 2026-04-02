@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE CongTy SYSTEM "Nhansu.dtd">
+
+<CongTy>
+    <TenCongTy>Dat Company</TenCongTy>
+
+    <DiaChi>
+        <SoNha>54/24A</SoNha>
+        <Duong>Mau Than</Duong>
+        <Quan>Quan 5</Quan>
+        <ThanhPho>TP. HCM</ThanhPho>
+    </DiaChi>
+
+    <!-- Chi nhanh 1 -->
+    <ChiNhanh>
+        <TenChiNhanh>abc</TenChiNhanh>
+
+        <DiaDiem>kkk</DiaDiem>
+
+        <NhanVien quanly="true">
+           <BangCap>thacsi</BangCap>
+            <HoTen>dat</HoTen>
+            <DienThoai>113</DienThoai>
+            <Email>g@</Email>
+        </NhanVien>
+
+        <NhanVien quanly="false">
+           <BangCap>thacsi</BangCap>
+            <HoTen>tin</HoTen>
+            <DienThoai>113</DienThoai>
+            <Email>g@</Email>
+        </NhanVien>
+
+        <NhanVien quanly="false">
+           <BangCap>thacsi</BangCap>
+            <HoTen>huan</HoTen>
+            <DienThoai>113</DienThoai>
+            <Email>g@</Email>
+        </NhanVien>
+        
+    </ChiNhanh>
+
+    <!-- Chi nhanh 2 -->
+    <ChiNhanh>
+        <TenChiNhanh>abc</TenChiNhanh>
+
+        <DiaDiem>kkk</DiaDiem>
+
+        <NhanVien quanly="true">
+           <BangCap>thacsi</BangCap>
+            <HoTen>dat</HoTen>
+            <DienThoai>113</DienThoai>
+            <Email>g@</Email>
+        </NhanVien>
+
+        <NhanVien quanly="false">
+           <BangCap>thacsi</BangCap>
+            <HoTen>tin</HoTen>
+            <DienThoai>113</DienThoai>
+            <Email>g@</Email>
+        </NhanVien>
+
+        <NhanVien quanly="false">
+           <BangCap>thacsi</BangCap>
+            <HoTen>huan</HoTen>
+            <DienThoai>113</DienThoai>
+            <Email>g@</Email>
+        </NhanVien>
+        
+    </ChiNhanh>
+
+</CongTy>

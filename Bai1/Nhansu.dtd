@@ -1,0 +1,21 @@
+<!ELEMENT CongTy (TenCongTy, DiaChi, ChiNhanh+)>
+
+<!ELEMENT TenCongTy (#PCDATA)>
+
+<!ELEMENT DiaChi (SoNha, Duong, Quan, ThanhPho)>
+<!ELEMENT SoNha (#PCDATA)>
+<!ELEMENT Duong (#PCDATA)>
+<!ELEMENT Quan (#PCDATA)>
+<!ELEMENT ThanhPho (#PCDATA)>
+
+<!ELEMENT ChiNhanh (TenChiNhanh, DiaDiem, NhanVien+)>
+<!ELEMENT TenChiNhanh (#PCDATA)>
+<!ELEMENT DiaDiem (#PCDATA)>
+
+<!ELEMENT NhanVien (BangCap, HoTen, DienThoai, Email)>
+<!ATTLIST NhanVien quanly (true | false) #REQUIRED>
+
+<!ELEMENT BangCap (#PCDATA)>
+<!ELEMENT HoTen (#PCDATA)>
+<!ELEMENT DienThoai (#PCDATA)>
+<!ELEMENT Email (#PCDATA)>
