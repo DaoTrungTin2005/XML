@@ -1,0 +1,13 @@
+<!ELEMENT letter (#PCDATA | customer | order | manager)*>
+
+<!ELEMENT customer (#PCDATA)>
+
+<!ELEMENT order (item+)>
+<!ATTLIST order num CDATA #REQUIRED>
+
+<!ELEMENT item (code, description)>
+<!ELEMENT code (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+
+<!ELEMENT manager (#PCDATA | title)*>
+<!ELEMENT title (#PCDATA)>

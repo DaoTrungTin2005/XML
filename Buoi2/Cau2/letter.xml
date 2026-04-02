@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE letter SYSTEM "letter.dtd">
+
+<letter>
+    Dear <customer>Ben Richardson</customer>, we inform you that the following items you have ordered are no longer available in stock:
+
+    <order num="1234">
+        <item>
+            <code>1</code>
+            <description>Article 1</description>
+        </item>
+        <item>
+            <code>5</code>
+            <description>Article 5</description>
+        </item>
+    </order>
+
+    Kind regards, 
+    <manager>
+        <title>Dr.</title> Mario Rossi
+    </manager>
+</letter>
