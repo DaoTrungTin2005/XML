@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DanhSachSinhVien xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:noNamespaceSchemaLocation="sinhvien.xsd">
+
+    <SinhVien MaSV="SV000001">
+        <HoTen>Nguyen Van A</HoTen>
+        <Tuoi>20</Tuoi>
+        <Lop>CTK42</Lop>
+    </SinhVien>
+
+    <SinhVien MaSV="SV000002">
+        <HoTen>Tran Thi B</HoTen>
+        <Tuoi>22</Tuoi>
+        <Lop>CTK43</Lop>
+    </SinhVien>
+
+</DanhSachSinhVien>

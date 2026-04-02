@@ -3,27 +3,25 @@
                xsi:noNamespaceSchemaLocation="invoice.xsd">
 
   <Customers>
-    <Customer>
-      <CustomerID>C01</CustomerID>
+    <Customer CustomerID="C01">
       <Name>Nguyen Van A</Name>
       <Phone>0123456789</Phone>
     </Customer>
-    <Customer>
-      <CustomerID>C02</CustomerID>
+
+    <Customer CustomerID="C02">
       <Name>Tran Thi B</Name>
       <Phone>0987654321</Phone>
     </Customer>
   </Customers>
 
   <Products>
-    <Product>
-      <ProductID>P01</ProductID>
+    <Product ProductID="P01">
       <Name>Laptop</Name>
       <Price>1500</Price>
       <Stock>10</Stock>
     </Product>
-    <Product>
-      <ProductID>P02</ProductID>
+
+    <Product ProductID="P02">
       <Name>Mouse</Name>
       <Price>20</Price>
       <Stock>50</Stock>
@@ -31,41 +29,29 @@
   </Products>
 
   <Invoices>
-    <Invoice>
-      <InvoiceID>I01</InvoiceID>
-      <CustomerID>C01</CustomerID>
+    <Invoice InvoiceID="I01" CustomerID="C01">
       <Date>2024-05-01</Date>
       <TotalAmount>1520</TotalAmount>
     </Invoice>
-    <Invoice>
-      <InvoiceID>I02</InvoiceID>
-      <CustomerID>C02</CustomerID>
+
+    <Invoice InvoiceID="I02" CustomerID="C02">
       <Date>2024-05-02</Date>
       <TotalAmount>40</TotalAmount>
     </Invoice>
   </Invoices>
 
   <InvoiceDetails>
-    <InvoiceDetail>
-      <InvoiceDetailID>D01</InvoiceDetailID>
-      <InvoiceID>I01</InvoiceID>
-      <ProductID>P01</ProductID>
+    <InvoiceDetail InvoiceDetailID="D01" InvoiceID="I01" ProductID="P01">
       <Quantity>1</Quantity>
       <UnitPrice>1500</UnitPrice>
     </InvoiceDetail>
 
-    <InvoiceDetail>
-      <InvoiceDetailID>D02</InvoiceDetailID>
-      <InvoiceID>I01</InvoiceID>
-      <ProductID>P02</ProductID>
+    <InvoiceDetail InvoiceDetailID="D02" InvoiceID="I01" ProductID="P02">
       <Quantity>1</Quantity>
       <UnitPrice>20</UnitPrice>
     </InvoiceDetail>
 
-    <InvoiceDetail>
-      <InvoiceDetailID>D03</InvoiceDetailID>
-      <InvoiceID>I02</InvoiceID>
-      <ProductID>P02</ProductID>
+    <InvoiceDetail InvoiceDetailID="D03" InvoiceID="I02" ProductID="P02">
       <Quantity>2</Quantity>
       <UnitPrice>20</UnitPrice>
     </InvoiceDetail>

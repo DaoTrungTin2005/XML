@@ -1,0 +1,8 @@
+<!ELEMENT DanhSachSinhVien (SinhVien+)>
+
+<!ELEMENT SinhVien (HoTen, Tuoi, Lop)>
+<!ATTLIST SinhVien MaSV ID #REQUIRED>
+
+<!ELEMENT HoTen (#PCDATA)>
+<!ELEMENT Tuoi (#PCDATA)>
+<!ELEMENT Lop (#PCDATA)>

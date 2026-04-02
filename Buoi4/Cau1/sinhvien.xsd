@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+
+    <xs:element name="DanhSachSinhVien">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SinhVien" type="SinhVienType" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="SinhVienType">
+        <xs:sequence>
+            <xs:element name="HoTen" type= "HoTenType"></xs:element>
+            <xs:element name="Tuoi" type="TuoiType"/>
+            <xs:element name="Lop" type="xs:string"/>
+        </xs:sequence>
+
+            <xs:attribute name="MaSV" type="MaSVType" use="required"/>
+    </xs:complexType>
+
+    <!-- MaSV: bắt đầu SV + đủ 8 ký tự -->
+    <xs:simpleType name="MaSVType">
+        <xs:restriction base="xs:string">
+            <xs:length value="8"/>
+            <xs:pattern value="SV\d{6}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- HoTen: tối đa 50 ký tự -->
+    <xs:simpleType name="HoTenType">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="50"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Tuoi: từ 18 → 30 -->
+    <xs:simpleType name="TuoiType">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="18"/>
+            <xs:maxInclusive value="30"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+
+</xs:schema>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE DanhSachSinhVien SYSTEM "sinhvien.dtd">
+
+<DanhSachSinhVien>
+    <SinhVien MaSV="SV001">
+        <HoTen>Nguyen Van A</HoTen>
+        <Tuoi>20</Tuoi>
+        <Lop>CTK42</Lop>
+    </SinhVien>
+
+    <SinhVien MaSV="SV002">
+        <HoTen>Tran Thi B</HoTen>
+        <Tuoi>82</Tuoi>
+        <Lop>CTK43</Lop>
+    </SinhVien>
+</DanhSachSinhVien>
