@@ -9,10 +9,12 @@
 <!ELEMENT away (#PCDATA)>
 
 <!ELEMENT events (event+)>
-<!ELEMENT event (minute, player, team, type, detail?)>
+<!ELEMENT event (minute, player, team?)>
+
+<!ATTLIST event type (goal | yellow | red) #REQUIRED
+                penalty (yes | no) "no"
+>
 
 <!ELEMENT minute (#PCDATA)>
 <!ELEMENT player (#PCDATA)>
 <!ELEMENT team (#PCDATA)>
-<!ELEMENT type (#PCDATA)>
-<!ELEMENT detail (#PCDATA)>

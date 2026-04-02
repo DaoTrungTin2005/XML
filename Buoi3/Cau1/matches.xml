@@ -11,20 +11,30 @@
         </teams>
 
         <events>
-            <event>
+            <event type="goal" penalty="yes">
                 <minute>16</minute>
-                <player>Luis Suares</player>
-                <team>BC</team>
-                <type>goal</type>
-                <detail>Penalty</detail>
+                <player>Luis Suarez</player>
+                <team>Barcelona</team>
             </event>
 
-            <event>
+            <event type="goal" penalty="no">
+                <minute>30</minute>
+                <player>Luis Suarez</player>
+                <team>Barcelona</team>
+            </event>
+
+            <event type="yellow">
                 <minute>41</minute>
                 <player>Ivan Rakitic</player>
-                <team>BC</team>
-                <type>Red Card</type>
+                <team>Barcelona</team>
             </event>
+
+            <event type="red">
+                <minute>74</minute>
+                <player>Gael Clichy</player>
+                <team>Manchester City</team>
+            </event>
+
         </events>
     </match>
 </matches>
