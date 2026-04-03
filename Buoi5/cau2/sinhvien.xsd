@@ -40,7 +40,7 @@
 
 
 
-    <!-- Danh sách môn học (1 → 4 môn) -->
+    <!-- Danh sách môn học (1 -> 4 môn) -->
   <xs:complexType name="DanhSachMonType">
     <xs:sequence>
       <xs:element name="MonHoc" type="MonHocType" minOccurs="1" maxOccurs="4"/>

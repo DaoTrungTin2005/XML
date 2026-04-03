@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="DSVM">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="VungMien" type="VungMienType" maxOccurs="unbounded"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="VungMienType">
+        <xs:sequence>
+            <xs:element name="Ten" type="xs:string"></xs:element>
+            <xs:element name="KhoangCach" type="xs:string"></xs:element>
+            <xs:element name="GiaoThong" type="GiaoThongType"></xs:element>
+            <xs:element name="ThangCanh" type="ThangCanhType"></xs:element>
+            <xs:element name="DacSan" type="DacSanType"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- GIAO THONG -->
+        
+    <xs:complexType name="GiaoThongType">
+        <xs:sequence>            
+            <xs:element name="DuongBo" type="DuongBoType" minOccurs="0" maxOccurs="unbounded"></xs:element> <!-- nếu ko có minOccurs="0" thì sẽ bắt buộc dùng 4 loại-->
+            <xs:element name="DuongSat" type="DuongSatType" minOccurs="0"></xs:element>
+            <xs:element name="DuongThuy" type="DuongThuyType" minOccurs="0"></xs:element>
+            <xs:element name="HangKhong" type="HangKhongType" minOccurs="0"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="DuongBoType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="OTo"></xs:enumeration>
+            <xs:enumeration value="XeMay"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="DuongSatType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="TauHoa"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="DuongThuyType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="TauThuy"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="HangKhongType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="MayBay"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- THẮNG CẢNH -->
+     <xs:complexType name="ThangCanhType">
+        <xs:sequence>
+            <xs:element name="DanhSachDiaDanh" type="DanhSachDiaDanhType" ></xs:element>
+        </xs:sequence>
+     </xs:complexType>
+
+     <xs:complexType name="DanhSachDiaDanhType">
+        <xs:sequence>
+            <xs:element name="DiaDanh" type="DiaDanhType" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+     </xs:complexType>
+
+     <xs:complexType name="DiaDanhType">
+        <xs:sequence>
+            <xs:element name="TenDiaDanh" type="xs:string"></xs:element>
+        </xs:sequence>
+        <xs:attribute name="LoaiDiaDanh" type="LoaiDiaDanhType"></xs:attribute>
+     </xs:complexType>
+
+     <xs:simpleType name="LoaiDiaDanhType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="LichSu"></xs:enumeration>
+            <xs:enumeration value="VanHoa"></xs:enumeration>
+            <xs:enumeration value="ThienNhien"></xs:enumeration>
+        </xs:restriction>
+     </xs:simpleType>
+
+
+     <!-- ĐẶC SẢN -->
+     <xs:complexType name="DacSanType">
+        <xs:sequence>
+            <xs:element name="DanhSachMonAn" type="DanhSachMonAnType"></xs:element>
+        </xs:sequence>
+     </xs:complexType>
+
+     <xs:complexType name="DanhSachMonAnType">
+        <xs:sequence>
+            <xs:element name="MonAn" type="MonAnType" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+     </xs:complexType>
+
+     <xs:complexType name="MonAnType">
+        <xs:sequence>
+            <xs:element name="TenMonAn" type="xs:string"></xs:element>
+        </xs:sequence>
+        <xs:attribute name="LoaiMonAn" type="LoaiMonAnType"></xs:attribute>
+     </xs:complexType>
+
+     <xs:simpleType name="LoaiMonAnType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Ngot"></xs:enumeration>
+            <xs:enumeration value="Man"></xs:enumeration>
+        </xs:restriction>
+     </xs:simpleType>
+
+
+
+</xs:schema>

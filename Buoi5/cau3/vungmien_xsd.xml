@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DSVM
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="vungmien.xsd">
+    
+    <VungMien>
+        <Ten>Vĩnh Long</Ten>
+        <KhoangCach>500km</KhoangCach>
+        <GiaoThong>
+            <DuongBo>OTo</DuongBo>
+            <DuongBo>XeMay</DuongBo>
+        </GiaoThong>
+        <ThangCanh>
+            <DanhSachDiaDanh>
+                
+                <DiaDanh LoaiDiaDanh="ThienNhien">
+                    <TenDiaDanh>Hồ Hoàn Kiếm</TenDiaDanh>
+                </DiaDanh>
+
+                <DiaDanh LoaiDiaDanh="LichSu">
+                    <TenDiaDanh>Laptop cổ</TenDiaDanh>
+                </DiaDanh>
+
+            </DanhSachDiaDanh>
+        </ThangCanh>
+        <DacSan>
+            <DanhSachMonAn>
+                <MonAn LoaiMonAn="Ngot">
+                    <TenMonAn>Sầu Riêng</TenMonAn>
+                </MonAn>
+            </DanhSachMonAn>
+        </DacSan>
+    </VungMien>
+
+
+</DSVM>
