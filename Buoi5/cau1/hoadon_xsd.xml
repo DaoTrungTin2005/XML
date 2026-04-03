@@ -5,7 +5,9 @@
   <!-- Hóa đơn 1 -->
   <HoaDon>
     <SoHoaDon>HD001</SoHoaDon>
+
     <Ngay>2026-04-02</Ngay>
+
     <KhachHang MaKH="KH01">
       <TenKhachHang>Nguyen Van A</TenKhachHang>
       <DiaChi>123 Le Loi, Hanoi</DiaChi>
@@ -13,6 +15,7 @@
       <Email>nguyenvana@gmail.com</Email>
       <Email>nguyenvana@yahoo.com</Email>
     </KhachHang>
+
     <DanhSachMatHang>
       <MatHang>
         <MaHang>HH01</MaHang>
@@ -31,13 +34,17 @@
 
   <!-- Hóa đơn 2 -->
   <HoaDon>
+
     <SoHoaDon>HD002</SoHoaDon>
+
     <Ngay>2026-04-02</Ngay>
+
     <KhachHang MaKH="KH02">
       <TenKhachHang>Tran Thi B</TenKhachHang>
       <SoDienThoai>0912345678</SoDienThoai>
       <Email>tranthib@gmail.com</Email>
     </KhachHang>
+
     <DanhSachMatHang>
       <MatHang>
         <MaHang>HH03</MaHang>
@@ -52,6 +59,7 @@
         <DonGia>25000</DonGia>
       </MatHang>
     </DanhSachMatHang>
+    
   </HoaDon>
 
 </DanhSachHoaDon>

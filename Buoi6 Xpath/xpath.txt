@@ -1,0 +1,189 @@
+1. Hiển thị các thẻ có tên cụ thể
+
+XPath:
+
+//TenKhachHang
+
+Kết quả:
+
+Nguyen Van A
+Tran Thi B
+//SoHoaDon
+
+Kết quả:
+
+HD001
+HD002
+//SoDienThoai
+
+Kết quả:
+
+0987654321
+0912345678
+2. Hiển thị tất cả thẻ con trong thẻ HoaDon
+
+XPath:
+
+//HoaDon/*
+
+Kết quả (hóa đơn 1):
+
+SoHoaDon
+Ngay
+KhachHang
+DanhSachMatHang
+3. Hiển thị đơn hàng thứ nhất, thứ hai
+
+XPath:
+
+//HoaDon[1]
+
+Kết quả:
+
+HoaDon (SoHoaDon=HD001, KhachHang=Nguyen Van A, MatHang=2 items)
+//HoaDon[2]
+
+Kết quả:
+
+HoaDon (SoHoaDon=HD002, KhachHang=Tran Thi B, MatHang=2 items)
+4. Hiển thị mặt hàng thứ nhất trong hóa đơn thứ nhất
+
+XPath:
+
+//HoaDon[1]/DanhSachMatHang/MatHang[1]
+
+Kết quả:
+
+MatHang (MaHang=HH01, TenHang=Banh Mi, SoLuong=5, DonGia=15000)
+5. Hiển thị nút cha của một nút bất kỳ
+
+Ví dụ nút cha của TenKhachHang:
+XPath:
+
+//TenKhachHang/parent::*
+
+Kết quả:
+
+KhachHang (MaKH=KH01)
+6. Hiển thị nút tổ tiên của một nút bất kỳ
+
+Ví dụ nút tổ tiên của TenKhachHang:
+XPath:
+
+//TenKhachHang/ancestor::*
+
+Kết quả:
+
+KhachHang
+HoaDon
+DanhSachHoaDon
+7. Hiển thị nút con của một nút bất kỳ
+
+Ví dụ nút con của KhachHang:
+XPath:
+
+//KhachHang/child::*
+
+Kết quả:
+
+TenKhachHang
+DiaChi (nếu có)
+SoDienThoai
+Email (1)
+Email (2 nếu có)
+8. Hiển thị nút cháu chắt của một nút bất kỳ
+
+Ví dụ cháu chắt của HoaDon (tất cả TenHang):
+XPath:
+
+//HoaDon/descendant::TenHang
+
+Kết quả:
+
+Banh Mi
+Nuoc Ngot
+Banh Ngot
+Cafe
+9. Hiển thị nút anh chị em của một nút bất kỳ
+
+Ví dụ anh chị em của TenKhachHang:
+XPath:
+
+//TenKhachHang/following-sibling::*
+
+Kết quả:
+
+DiaChi
+SoDienThoai
+Email (1)
+Email (2)
+10. Đếm số lượng nút con của một nút bất kỳ
+
+Ví dụ số lượng mặt hàng của hóa đơn 1:
+XPath:
+
+count(//HoaDon[1]/DanhSachMatHang/MatHang)
+
+Kết quả:
+
+2
+11. Hiển thị số hóa đơn
+
+XPath:
+
+//SoHoaDon
+
+Kết quả:
+
+HD001
+HD002
+12. Hiển thị tên khách hàng
+
+XPath:
+
+//TenKhachHang
+
+Kết quả:
+
+Nguyen Van A
+Tran Thi B
+13. Hiển thị tên các sản phẩm
+
+XPath:
+
+//TenHang
+
+Kết quả:
+
+Banh Mi
+Nuoc Ngot
+Banh Ngot
+Cafe
+14. Hiển thị số lượng của mặt hàng nào đó
+
+Ví dụ số lượng mặt hàng "Banh Mi":
+XPath:
+
+//MatHang[TenHang='Banh Mi']/SoLuong
+
+Kết quả:
+
+5
+15. Hiển thị tên khách hàng mua mặt hàng "Nuoc Ngot"
+
+XPath:
+
+//HoaDon[DanhSachMatHang/MatHang/TenHang='Nuoc Ngot']/KhachHang/TenKhachHang
+
+Kết quả:
+
+Nguyen Van A
+16. Hiển thị khách hàng đã mua mặt hàng "Cafe"
+
+XPath:
+
+//HoaDon[DanhSachMatHang/MatHang/TenHang='Cafe']/KhachHang/TenKhachHang
+
+Kết quả:
+
+Tran Thi B
