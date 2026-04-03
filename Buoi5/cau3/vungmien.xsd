@@ -67,11 +67,13 @@
         </xs:sequence>
      </xs:complexType>
 
+     <!-- Dùng khi ko có thẻ con mà vẫn có attribute, nếu có thẻ con + attribute thì làm như những bài trước -->
      <xs:complexType name="DiaDanhType">
-        <xs:sequence>
-            <xs:element name="TenDiaDanh" type="xs:string"></xs:element>
-        </xs:sequence>
-        <xs:attribute name="LoaiDiaDanh" type="LoaiDiaDanhType"></xs:attribute>
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="LoaiDiaDanh" type="LoaiDiaDanhType" use="required"></xs:attribute>
+            </xs:extension>
+        </xs:simpleContent>
      </xs:complexType>
 
      <xs:simpleType name="LoaiDiaDanhType">
@@ -96,11 +98,13 @@
         </xs:sequence>
      </xs:complexType>
 
+
      <xs:complexType name="MonAnType">
-        <xs:sequence>
-            <xs:element name="TenMonAn" type="xs:string"></xs:element>
-        </xs:sequence>
-        <xs:attribute name="LoaiMonAn" type="LoaiMonAnType"></xs:attribute>
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="LoaiMonAn" type="LoaiMonAnType"></xs:attribute>
+            </xs:extension>
+        </xs:simpleContent>
      </xs:complexType>
 
      <xs:simpleType name="LoaiMonAnType">

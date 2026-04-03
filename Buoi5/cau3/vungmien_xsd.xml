@@ -12,22 +12,15 @@
         </GiaoThong>
         <ThangCanh>
             <DanhSachDiaDanh>
-                
-                <DiaDanh LoaiDiaDanh="ThienNhien">
-                    <TenDiaDanh>Hồ Hoàn Kiếm</TenDiaDanh>
-                </DiaDanh>
-
-                <DiaDanh LoaiDiaDanh="LichSu">
-                    <TenDiaDanh>Laptop cổ</TenDiaDanh>
-                </DiaDanh>
+                <!-- Đia Danh ko có thẻ con mà vẫn có attribure -> simple content-->
+                <DiaDanh LoaiDiaDanh="LichSu">Thành Thăng Long</DiaDanh>
 
             </DanhSachDiaDanh>
         </ThangCanh>
         <DacSan>
             <DanhSachMonAn>
-                <MonAn LoaiMonAn="Ngot">
-                    <TenMonAn>Sầu Riêng</TenMonAn>
-                </MonAn>
+                <!-- Món ăn ko có thẻ con mà vẫn có attribure -> simple content-->
+                <MonAn LoaiMonAn="Ngot">Cơm</MonAn>
             </DanhSachMonAn>
         </DacSan>
     </VungMien>
