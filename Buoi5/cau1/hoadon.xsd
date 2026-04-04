@@ -25,7 +25,7 @@
   <!-- Kiểu cho email, đơn giản ###@###.### -->
   <xs:simpleType name="EmailType">
     <xs:restriction base="xs:string">
-      <xs:pattern value=".+@.+\..+"/>
+      <xs:pattern value=".+@.+\..+"></xs:pattern>
     </xs:restriction>
   </xs:simpleType>
 

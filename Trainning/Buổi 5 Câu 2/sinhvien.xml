@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="sinhvien.xsl" type="text/xsl"?>
+<DanhSachSinhVien
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="sinhvien.xsd">
+    
+    <SinhVien>
+        <HoTen>Nguyễn Hoàng Thuận</HoTen>
+        <Lop>TBK50CD</Lop>
+        <DanhsachMonHoc>
+            <MonHoc MaMon="IT01">
+                <TenMonHoc>Tiếng Anh</TenMonHoc>
+                <TinChi>4</TinChi>
+                <DiemMonHoc>10</DiemMonHoc>
+            </MonHoc>
+
+            <MonHoc MaMon="PT01">
+                <TenMonHoc>Toán</TenMonHoc>
+                <TinChi>4</TinChi>
+                <DiemMonHoc>9</DiemMonHoc>
+            </MonHoc>
+        </DanhsachMonHoc>
+    </SinhVien>
+
+    <SinhVien>
+        <HoTen>Huỳnh Kiến Quốc</HoTen>
+        <Lop>TBK51CD</Lop>
+        <DanhsachMonHoc>
+            <MonHoc MaMon="IT01">
+                <TenMonHoc>Ngữ Văn</TenMonHoc>
+                <TinChi>4</TinChi>
+                <DiemMonHoc>0</DiemMonHoc>
+            </MonHoc>
+
+            <MonHoc MaMon="PT01">
+                <TenMonHoc>Tiếng Anh</TenMonHoc>
+                <TinChi>4</TinChi>
+                <DiemMonHoc>0</DiemMonHoc>
+            </MonHoc>
+        </DanhsachMonHoc>
+    </SinhVien>
+
+</DanhSachSinhVien>
