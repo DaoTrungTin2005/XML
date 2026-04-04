@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    
+    <xs:element name="DanhSachKhachHang">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="KhachHang" type="KhachHangType" minOccurs="1" maxOccurs="unbounded"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+
+        <xs:unique name="UniqueSoDienThoai">
+            <xs:selector xpath="KhachHang"></xs:selector>
+            <xs:field xpath="SoDienThoai"></xs:field>
+        </xs:unique>
+
+    </xs:element>
+
+    <xs:complexType name="KhachHangType">
+        <xs:sequence>
+            <xs:element name="TenKhachHang" type="xs:string"></xs:element>
+            <xs:element name="SoDienThoai" type="SoDienThoaiType"></xs:element>
+            <xs:element name="DanhSachConCuaKhachHang" type="DanhSachConCuaKhachHangType"></xs:element>
+            <xs:element name="DanhSachVaccine" type="DanhSachVaccineType"></xs:element>
+        </xs:sequence>
+        <xs:attribute name="MaKhachHang" type="MaKhachHangType"></xs:attribute>
+    </xs:complexType>
+
+    <xs:simpleType name="SoDienThoaiType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{10}"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="MaKhachHangType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Za-z]{2}\d{2}"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="DanhSachVaccineType">
+        <xs:sequence>
+            <xs:element name="Vaccine" type="VaccineType" minOccurs="1" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="VaccineType">
+        <xs:sequence>
+            <xs:element name="TenVaccine" type="xs:string"></xs:element>
+            <xs:element name="NgayTiem" type="xs:date"></xs:element>
+            <xs:element name="NgayTiemTiepTheo" type="xs:date"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="DanhSachConCuaKhachHangType">
+        <xs:sequence>
+            <xs:element name="ConKhachHang" type="ConKhachHangType" minOccurs="0" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ConKhachHangType">
+        <xs:sequence>
+            <xs:element name="TenCon" type="TenConType"></xs:element>
+            <xs:element name="DanhSachVaccineCuaCon" type="DanhSachVaccineCuaConType"></xs:element>
+
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="DanhSachVaccineCuaConType">
+        <xs:sequence>
+            <xs:element name="VaccineCuaCon" type="VaccineCuaConType" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="VaccineCuaConType">
+        <xs:sequence>
+            <xs:element name="TenVaccine" type="TenVaccineType"></xs:element>
+            <xs:element name="NgayTiem" type="xs:date"></xs:element>
+            <xs:element name="NgayTiemTiepTheo" type="xs:date"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="TenConType">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="50"></xs:maxLength>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TenVaccineType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Sởi"></xs:enumeration>
+            <xs:enumeration value="Cảm Cúm"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+</xs:schema>

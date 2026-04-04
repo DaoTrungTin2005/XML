@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="vaccine.xsl" type="text/xsl"?>
+<DanhSachKhachHang
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="vaccine.xsd">
+    
+    <KhachHang MaKhachHang="Ab01">
+        <TenKhachHang>Đào Trung Tín</TenKhachHang>
+        <SoDienThoai>0326751251</SoDienThoai>
+        <DanhSachConCuaKhachHang>
+            <ConKhachHang>
+                <TenCon>Lê Thành Đạt</TenCon>
+                <DanhSachVaccineCuaCon>
+                    <VaccineCuaCon>
+                        <TenVaccine>Sởi</TenVaccine>
+                        <NgayTiem>2005-08-01</NgayTiem>
+                        <NgayTiemTiepTheo>2005-09-01</NgayTiemTiepTheo>
+                    </VaccineCuaCon>
+
+                    <VaccineCuaCon>
+                        <TenVaccine>Cảm Cúm</TenVaccine>
+                        <NgayTiem>2006-08-01</NgayTiem>
+                        <NgayTiemTiepTheo>2006-09-01</NgayTiemTiepTheo>
+                    </VaccineCuaCon>
+                </DanhSachVaccineCuaCon>
+            </ConKhachHang>
+
+            <ConKhachHang>
+                <TenCon>Lê Thành Công</TenCon>
+                <DanhSachVaccineCuaCon>
+                    <VaccineCuaCon>
+                        <TenVaccine>Sởi</TenVaccine>
+                        <NgayTiem>2005-08-01</NgayTiem>
+                        <NgayTiemTiepTheo>2005-09-01</NgayTiemTiepTheo>
+                    </VaccineCuaCon>
+
+                    <VaccineCuaCon>
+                        <TenVaccine>Cảm Cúm</TenVaccine>
+                        <NgayTiem>2006-08-01</NgayTiem>
+                        <NgayTiemTiepTheo>2006-09-01</NgayTiemTiepTheo>
+                    </VaccineCuaCon>
+                </DanhSachVaccineCuaCon>
+            </ConKhachHang>
+        </DanhSachConCuaKhachHang>
+
+        <DanhSachVaccine>
+            <Vaccine>
+                <TenVaccine>Covid</TenVaccine>
+                <NgayTiem>2025-08-01</NgayTiem>
+                <NgayTiemTiepTheo>2006-09-01</NgayTiemTiepTheo>
+            </Vaccine>
+
+            <Vaccine>
+                <TenVaccine>Epula</TenVaccine>
+                <NgayTiem>2095-08-01</NgayTiem>
+                <NgayTiemTiepTheo>2006-09-01</NgayTiemTiepTheo>
+            </Vaccine>
+        </DanhSachVaccine>
+    </KhachHang>
+
+
+
+
+    <KhachHang MaKhachHang="Ab02">
+        <TenKhachHang>Như</TenKhachHang>
+        <SoDienThoai>0326751250</SoDienThoai>
+        <DanhSachConCuaKhachHang>
+            <ConKhachHang>
+                <TenCon>Lê Thành Đạt</TenCon>
+                <DanhSachVaccineCuaCon>
+                    <VaccineCuaCon>
+                        <TenVaccine>Sởi</TenVaccine>
+                        <NgayTiem>2005-08-01</NgayTiem>
+                        <NgayTiemTiepTheo>2005-09-01</NgayTiemTiepTheo>
+                    </VaccineCuaCon>
+
+                    <VaccineCuaCon>
+                        <TenVaccine>Cảm Cúm</TenVaccine>
+                        <NgayTiem>2006-08-01</NgayTiem>
+                        <NgayTiemTiepTheo>2006-09-01</NgayTiemTiepTheo>
+                    </VaccineCuaCon>
+                </DanhSachVaccineCuaCon>
+            </ConKhachHang>
+
+            <ConKhachHang>
+                <TenCon>Lê Thành Công</TenCon>
+                <DanhSachVaccineCuaCon>
+                    <VaccineCuaCon>
+                        <TenVaccine>Sởi</TenVaccine>
+                        <NgayTiem>2005-08-01</NgayTiem>
+                        <NgayTiemTiepTheo>2005-09-01</NgayTiemTiepTheo>
+                    </VaccineCuaCon>
+
+                    <VaccineCuaCon>
+                        <TenVaccine>Cảm Cúm</TenVaccine>
+                        <NgayTiem>2006-08-01</NgayTiem>
+                        <NgayTiemTiepTheo>2006-09-01</NgayTiemTiepTheo>
+                    </VaccineCuaCon>
+                </DanhSachVaccineCuaCon>
+            </ConKhachHang>
+        </DanhSachConCuaKhachHang>
+
+        <DanhSachVaccine>
+            <Vaccine>
+                <TenVaccine>Covid</TenVaccine>
+                <NgayTiem>2005-08-01</NgayTiem>
+                <NgayTiemTiepTheo>2006-09-01</NgayTiemTiepTheo>
+            </Vaccine>
+
+            <Vaccine>
+                <TenVaccine>Epula</TenVaccine>
+                <NgayTiem>2005-08-01</NgayTiem>
+                <NgayTiemTiepTheo>2006-09-01</NgayTiemTiepTheo>
+            </Vaccine>
+        </DanhSachVaccine>
+    </KhachHang>
+
+
+
+</DanhSachKhachHang>
