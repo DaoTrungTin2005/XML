@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="hoadon1.xsl" type="text/xsl"?>
 <DanhSachHoaDon xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xsi:noNamespaceSchemaLocation="HoaDon.xsd">
 
@@ -59,7 +60,7 @@
         <DonGia>25000</DonGia>
       </MatHang>
     </DanhSachMatHang>
-    
+
   </HoaDon>
 
 </DanhSachHoaDon>
